@@ -56,7 +56,7 @@ const TestimonialsSection: React.FC = () => {
               ))}
             </div>
             <blockquote className="text-xl text-gray-700 mb-6 italic">
-              "{testimonials[currentTestimonial].quote}"
+              &quot;{testimonials[currentTestimonial].quote}&quot;
             </blockquote>
             <div className="flex items-center justify-center space-x-4">
               <div className="relative w-12 h-12">

@@ -48,7 +48,7 @@ const SuccessStoriesSection: React.FC = () => {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-1">{story.name}</h3>
               <p className="text-[#f06723] font-medium mb-3">{story.achievement}</p>
-              <p className="text-gray-600 text-sm italic">"{story.story}"</p>
+              <p className="text-gray-600 text-sm italic">&quot;{story.story}&quot;</p>
             </div>
           ))}
         </div>
