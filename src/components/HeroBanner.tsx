@@ -66,7 +66,7 @@ const HeroBanner: React.FC = () => {
               className="object-cover"
               priority={index === 0}
             />
-            <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+            <div className="absolute inset-0 bg-black/70 flex items-center justify-center">
               <div className="text-center text-white px-4 max-w-4xl">
                 <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
                   {slide.title}

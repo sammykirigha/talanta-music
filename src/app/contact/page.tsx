@@ -1,8 +1,8 @@
 'use client';
 
 import type { Metadata } from 'next';
-import { useState } from 'react';
-
+import { useState, useEffect } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 
 
 export default function ContactPage() {
@@ -16,47 +16,16 @@ export default function ContactPage() {
     email: '',
     message: '',
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
+  const [state, handleSubmit, reset] = useForm("xanpdbkb");
 
-  const validateForm = () => {
-    const newErrors = { name: '', email: '', message: '' };
-    let isValid = true;
-
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-      isValid = false;
-    }
-
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-      isValid = false;
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Email is invalid';
-      isValid = false;
-    }
-
-    if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
-      isValid = false;
-    }
-
-    setErrors(newErrors);
-    return isValid;
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!validateForm()) return;
-
-    setIsSubmitting(true);
-    // Simulate form submission
-    setTimeout(() => {
+  useEffect(() => {
+    if (state.succeeded) {
       setSubmitMessage('Thank you for your message! We\'ll get back to you soon.');
       setFormData({ name: '', email: '', message: '' });
-      setIsSubmitting(false);
-    }, 1000);
-  };
+      reset();
+    }
+  }, [state.succeeded, reset]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -96,16 +65,15 @@ export default function ContactPage() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#f06723] ${
-                      errors.name ? 'border-red-500' : 'border-gray-300'
-                    }`}
+                    className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#f06723] ${errors.name ? 'border-red-500' : 'border-gray-300'
+                      }`}
                     aria-describedby={errors.name ? 'name-error' : undefined}
                   />
-                  {errors.name && (
-                    <p id="name-error" className="mt-1 text-sm text-red-600">
-                      {errors.name}
-                    </p>
-                  )}
+                  <ValidationError
+                    prefix="Name"
+                    field="name"
+                    errors={state.errors}
+                  />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
@@ -117,16 +85,15 @@ export default function ContactPage() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#f06723] ${
-                      errors.email ? 'border-red-500' : 'border-gray-300'
-                    }`}
+                    className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#f06723] ${errors.email ? 'border-red-500' : 'border-gray-300'
+                      }`}
                     aria-describedby={errors.email ? 'email-error' : undefined}
                   />
-                  {errors.email && (
-                    <p id="email-error" className="mt-1 text-sm text-red-600">
-                      {errors.email}
-                    </p>
-                  )}
+                  <ValidationError
+                    prefix="Email"
+                    field="email"
+                    errors={state.errors}
+                  />
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
@@ -138,23 +105,22 @@ export default function ContactPage() {
                     rows={5}
                     value={formData.message}
                     onChange={handleChange}
-                    className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#f06723] ${
-                      errors.message ? 'border-red-500' : 'border-gray-300'
-                    }`}
+                    className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#f06723] ${errors.message ? 'border-red-500' : 'border-gray-300'
+                      }`}
                     aria-describedby={errors.message ? 'message-error' : undefined}
                   />
-                  {errors.message && (
-                    <p id="message-error" className="mt-1 text-sm text-red-600">
-                      {errors.message}
-                    </p>
-                  )}
+                  <ValidationError
+                    prefix="Message"
+                    field="message"
+                    errors={state.errors}
+                  />
                 </div>
                 <button
                   type="submit"
-                  disabled={isSubmitting}
+                 disabled={state.submitting}
                   className="w-full bg-[#f06723] text-white px-6 py-3 rounded-md hover:bg-[#d55a1f] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {state.submitting ? 'Sending...' : 'Send Message'}
                 </button>
                 {submitMessage && (
                   <p className="text-green-600 text-center mt-4">{submitMessage}</p>
@@ -173,7 +139,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900">Location</h3>
-                      <p className="text-gray-600">Utawala opposite AP training college,<br />Twiga Plaza 2nd floor</p>
+                      <p className="text-gray-600">Utawala opposite AP training college,<br />Twiga Plaza 1nd floor</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -200,10 +166,16 @@ export default function ContactPage() {
               {/* Map Placeholder */}
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Find Us</h3>
-                <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
-                  <p className="text-gray-600">Interactive Map Coming Soon</p>
-                  {/* In a real implementation, embed Google Maps or similar */}
-                </div>
+                <iframe
+                  src="https://maps.google.com/maps?q=Talanta%20Music%20and%20Arts%20Academy%2C%20Utawala%2C%20Nairobi%2C%20Kenya&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-lg"
+                ></iframe>
               </div>
             </div>
           </div>

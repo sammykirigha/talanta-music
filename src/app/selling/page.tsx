@@ -11,51 +11,67 @@ export const metadata: Metadata = {
 const instruments = [
   {
     id: 1,
-    name: 'Acoustic Guitar',
-    description: 'High-quality acoustic guitar perfect for beginners and professionals alike.',
-    price: 'KSh 25,000',
-    image: '/guitar.jpg',
-    alt: 'Acoustic guitar for sale',
+    name: 'PSR 283 Digital Keyboard',
+    description: '88-key digital keyboard with multiple sound options and power adaptor included.',
+    price: 'KES 50,000',
+    image: '/store/piano.jpg',
+    alt: 'PSR 283 Digital Keyboard',
   },
   {
     id: 2,
-    name: 'Digital Piano',
-    description: '88-key digital piano with weighted keys and multiple sound options.',
-    price: 'KSh 45,000',
-    image: '/image-11.avif',
-    alt: 'Digital piano instrument',
+    name: 'PSR E360 Digital Keyboard',
+    description: 'Portable digital keyboard with 61 keys and power adaptor included.',
+    price: 'KES 26,000',
+    image: '/store/piano-2.jpg',
+    alt: 'PSR E360 Digital Keyboard',
   },
   {
     id: 3,
-    name: 'Drum Set',
-    description: 'Complete 5-piece drum set with cymbals, ideal for practice and performance.',
-    price: 'KSh 35,000',
-    image: '/image-12.avif',
-    alt: 'Drum set for musicians',
+    name: 'Drums Set',
+    description: 'Advanced digital keyboard with 61 keys and power adaptor included.',
+    price: 'KES 50,000',
+    image: '/store/drumset.jpg',
+    alt: 'Drums Set',
   },
   {
     id: 4,
-    name: 'Electric Guitar',
-    description: 'Solid body electric guitar with humbucker pickups for rock and blues.',
-    price: 'KSh 30,000',
-    image: '/image-13.avif',
-    alt: 'Electric guitar',
+    name: 'Saxophone',
+    description: 'Yamaha YAS-280 Alto Saxophone, perfect for beginners and intermediate players.',
+    price: 'KES 107,000',
+    image: '/store/saxophone.jpg',
+    alt: 'PSR SX600 Digital Keyboard',
   },
   {
     id: 5,
-    name: 'Violin',
+    name: 'Maple Leaf Violin',
     description: 'Handcrafted violin with rich tone, suitable for classical music.',
-    price: 'KSh 20,000',
-    image: '/image-14.avif',
-    alt: 'Violin instrument',
+    price: 'KES 12,000',
+    image: '/store/violin.jpg',
+    alt: 'Maple Leaf Violin',
   },
   {
-    id: 6,
-    name: 'Saxophone',
-    description: 'Alto saxophone in brass finish, great for jazz and contemporary music.',
-    price: 'KSh 40,000',
-    image: '/image-15.jpg',
-    alt: 'Saxophone for sale',
+    id: 7,
+    name: 'Classical Guitars',
+    description: 'High-quality Classical Guitars perfect for beginners and professionals.',
+    price: 'KES 25,000',
+    image: '/store/guitar-2.jpg',
+    alt: 'Classical Guitars',
+  },
+  {
+    id: 8,
+    name: 'Electric Guitar',
+    description: 'Solid body electric guitar with humbucker pickups for rock and blues.',
+    price: 'KES 30,000',
+    image: '/store/guiter-3.jpg',
+    alt: 'Electric Guitar',
+  },
+  {
+    id: 9,
+    name: 'Studio Headphones',
+    description: 'Professional studio headphones for clear sound monitoring and music production.',
+    price: 'KES 4,500',
+    image: '/store/headphones.jpg',
+    alt: 'Studio Headphones',
   },
 ];
 
@@ -89,16 +105,16 @@ export default function SellingPage() {
             {instruments.map((instrument) => (
               <div
                 key={instrument.id}
-                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
                 itemScope
                 itemType="https://schema.org/Product"
               >
-                <div className="relative h-48">
+                <div className="relative h-64 w-full p-1">
                   <Image
                     src={instrument.image}
                     alt={instrument.alt}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                     loading="lazy"
                   />
                 </div>
@@ -116,10 +132,19 @@ export default function SellingPage() {
                   </div>
                   <Link
                     href="/contact"
-                    className="w-full bg-[#f06723] text-white px-4 py-2 rounded-md hover:bg-[#d55a1f] transition-colors text-center block"
+                    className="w-full bg-[#f06723] text-white px-4 py-2 rounded-md hover:bg-[#d55a1f] transition-colors text-center block group-hover:hidden"
                   >
                     Contact for More Info
                   </Link>
+                  <div className="hidden group-hover:block p-4 bg-gray-50 rounded-md">
+                    <p className="text-sm text-gray-700 mb-2">
+                      <strong>Phone:</strong> 0794 943 791 / 0703 26 34 34
+                      <a href="https://wa.me/254794943791" target="_blank" rel="noopener noreferrer" className="ml-2 text-green-600 hover:text-green-800">
+                        📱 WhatsApp
+                      </a>
+                    </p>
+                    <p className="text-sm text-gray-700"><strong>Email:</strong> talantaschool.arts@gmail.com</p>
+                  </div>
                 </div>
               </div>
             ))}

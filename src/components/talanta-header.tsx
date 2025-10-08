@@ -17,29 +17,38 @@ const TalantaHeader = () => {
   };
 
   return (
-    <header className="bg-[#01435d] shadow-lg">
+    <header className="sticky top-0 bg-[#01435d] shadow-lg z-50">
       <div className="w-full max-w-[1200px] mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo and Brand Name */}
-          <Link href="/" className="flex items-center space-x-3" onClick={closeMobileMenu}>
-            <Image src="/logo.png" alt='Talanta Logo' width={40} height={40} className='rounded-full' />
-            <span className="text-white font-bold text-lg hidden sm:block">Talanta Music & Art Space</span>
-          </Link>
+          <div className="flex  md:items-center">
+            <Link href="/" className="flex items-center space-x-3" onClick={closeMobileMenu}>
+              <Image src="/logo.png" alt='Talanta Logo' width={40} height={40} className='rounded-full' />
+              <span className="text-white font-bold text-lg hidden sm:block">Talanta Music & Art Space</span>
+            </Link>
+            <a
+              href="tel:0794943791"
+              className="md:hidden flex items-center space-x-1 text-white text-sm mt-1"
+            >
+              <span>📞</span>
+              <span>0794 943 791</span>
+            </a>
+          </div>
 
           {/* Navigation Menu - Desktop */}
           <nav className="hidden md:flex items-center space-x-8">
             <div className="relative group">
               <Link href="/courses" className="flex items-center space-x-1 text-white hover:text-[#f06723] font-medium transition-colors py-2">
                 <span>Courses</span>
-                <ChevronDown className="w-4 h-4" />
+                {/* <ChevronDown className="w-4 h-4" /> */}
               </Link>
               <div className="absolute left-0 right-0 h-0.5 bg-[#f06723] opacity-0 group-hover:opacity-100 transition-opacity -bottom-1"></div>
             </div>
 
             <div className="relative group">
-              <Link href="/about" className="flex items-center space-x-1 text-white hover:text-[#f06723] font-medium transition-colors py-2">
-                <span>About</span>
-                <ChevronDown className="w-4 h-4" />
+              <Link href="/about-us" className="flex items-center space-x-1 text-white hover:text-[#f06723] font-medium transition-colors py-2">
+                <span>About Us</span>
+                {/* <ChevronDown className="w-4 h-4" /> */}
               </Link>
               <div className="absolute left-0 right-0 h-0.5 bg-[#f06723] opacity-0 group-hover:opacity-100 transition-opacity -bottom-1"></div>
             </div>
@@ -47,24 +56,8 @@ const TalantaHeader = () => {
             <div className="relative group">
               <Link href="/selling" className="flex items-center space-x-1 text-white hover:text-[#f06723] font-medium transition-colors py-2">
                 <span>Store</span>
-                <ChevronDown className="w-4 h-4" />
+                {/* <ChevronDown className="w-4 h-4" /> */}
               </Link>
-              <div className="absolute left-0 right-0 h-0.5 bg-[#f06723] opacity-0 group-hover:opacity-100 transition-opacity -bottom-1"></div>
-            </div>
-
-            <div className="relative group">
-              <button className="flex items-center space-x-1 text-white hover:text-[#f06723] font-medium transition-colors py-2">
-                <span>Programs</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              <div className="absolute left-0 right-0 h-0.5 bg-[#f06723] opacity-0 group-hover:opacity-100 transition-opacity -bottom-1"></div>
-            </div>
-
-            <div className="relative group">
-              <button className="flex items-center space-x-1 text-white hover:text-[#f06723] font-medium transition-colors py-2">
-                <span>Support</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
               <div className="absolute left-0 right-0 h-0.5 bg-[#f06723] opacity-0 group-hover:opacity-100 transition-opacity -bottom-1"></div>
             </div>
 
@@ -74,6 +67,14 @@ const TalantaHeader = () => {
             >
               Contact Us
             </Link>
+
+            <a
+              href="tel:0794943791"
+              className="flex items-center space-x-1 text-white hover:text-[#f06723] font-medium transition-colors py-2"
+            >
+              <span>📞</span>
+              <span>0794 943 791</span>
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -124,6 +125,13 @@ const TalantaHeader = () => {
               >
                 Contact Us
               </Link>
+              <a
+                href="tel:0794943791"
+                className="block text-white hover:text-[#f06723] font-medium py-2 transition-colors"
+                onClick={closeMobileMenu}
+              >
+                📞 0794 943 791
+              </a>
             </nav>
           </div>
         )}

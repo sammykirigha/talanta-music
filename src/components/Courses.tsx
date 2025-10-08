@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const courses = [
@@ -100,9 +101,9 @@ const Courses: React.FC = () => {
                 <p className="text-gray-600 mb-4">
                   {course.description}
                 </p>
-                <button className="bg-[#f06723] text-white px-4 py-2 rounded-md hover:bg-[#d55a1f] transition-colors">
+                <Link href="/contact" className="inline-block bg-[#f06723] text-white px-4 py-2 rounded-md hover:bg-[#d55a1f] transition-colors">
                   Learn More
-                </button>
+                </Link>
               </div>
             </div>
           ))}
@@ -136,9 +137,9 @@ const Courses: React.FC = () => {
                   <p className="text-gray-600 mb-4">
                     {course.description}
                   </p>
-                  <button className="bg-[#f06723] text-white px-4 py-2 rounded-md hover:bg-[#d55a1f] transition-colors">
+                  <Link href="/contact" className="inline-block bg-[#f06723] text-white px-4 py-2 rounded-md hover:bg-[#d55a1f] transition-colors">
                     Learn More
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
