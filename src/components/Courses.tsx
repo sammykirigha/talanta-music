@@ -84,6 +84,8 @@ const Courses: React.FC = () => {
             <div
               key={course.id}
               className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300 hover:scale-105 transform"
+              itemScope
+              itemType="https://schema.org/Course"
             >
               <div className="relative h-48">
                 <Image
@@ -95,10 +97,10 @@ const Courses: React.FC = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2" itemProp="name">
                   {course.title}
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4" itemProp="description">
                   {course.description}
                 </p>
                 <Link href="/contact" className="inline-block bg-[#f06723] text-white px-4 py-2 rounded-md hover:bg-[#d55a1f] transition-colors">
@@ -120,6 +122,8 @@ const Courses: React.FC = () => {
               <div
                 key={course.id}
                 className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300 flex-shrink-0 w-72"
+                itemScope
+                itemType="https://schema.org/Course"
               >
                 <div className="relative h-48">
                   <Image
@@ -131,10 +135,10 @@ const Courses: React.FC = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2" itemProp="name">
                     {course.title}
                   </h3>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-600 mb-4" itemProp="description">
                     {course.description}
                   </p>
                   <Link href="/contact" className="inline-block bg-[#f06723] text-white px-4 py-2 rounded-md hover:bg-[#d55a1f] transition-colors">

@@ -55,7 +55,7 @@ const SuccessStoriesSection: React.FC = () => {
         {/* Desktop Grid */}
         <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8">
           {stories.map((story, index) => (
-            <div key={index} className="bg-gray-50 rounded-lg p-6 text-center">
+            <div key={index} className="bg-gray-50 rounded-lg p-6 text-center" itemScope itemType="https://schema.org/Person">
               <div className="relative w-20 h-20 mx-auto mb-4">
                 <Image
                   src={story.image}
@@ -63,11 +63,12 @@ const SuccessStoriesSection: React.FC = () => {
                   fill
                   className="object-cover rounded-full"
                   loading="lazy"
+                  itemProp="image"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-1">{story.name}</h3>
-              <p className="text-[#f06723] font-medium mb-3">{story.achievement}</p>
-              <p className="text-gray-600 text-sm italic">"{story.story}"</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-1" itemProp="name">{story.name}</h3>
+              <p className="text-[#f06723] font-medium mb-3" itemProp="jobTitle">{story.achievement}</p>
+              <p className="text-gray-600 text-sm italic" itemProp="description">&quot;{story.story}&quot;</p>
             </div>
           ))}
         </div>
@@ -80,7 +81,7 @@ const SuccessStoriesSection: React.FC = () => {
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {stories.map((story, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg p-6 text-center flex-shrink-0 w-80">
+              <div key={index} className="bg-gray-50 rounded-lg p-6 text-center flex-shrink-0 w-80" itemScope itemType="https://schema.org/Person">
                 <div className="relative w-20 h-20 mx-auto mb-4">
                   <Image
                     src={story.image}
@@ -88,11 +89,12 @@ const SuccessStoriesSection: React.FC = () => {
                     fill
                     className="object-cover rounded-full"
                     loading="lazy"
+                    itemProp="image"
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-1">{story.name}</h3>
-                <p className="text-[#f06723] font-medium mb-3">{story.achievement}</p>
-                <p className="text-gray-600 text-sm italic">"{story.story}"</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-1" itemProp="name">{story.name}</h3>
+                <p className="text-[#f06723] font-medium mb-3" itemProp="jobTitle">{story.achievement}</p>
+                <p className="text-gray-600 text-sm italic" itemProp="description">&quot;{story.story}&quot;</p>
               </div>
             ))}
           </div>

@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <Image src="/logo.png" alt="Talanta Logo" width={40} height={40} className="rounded-full" />
-              <span className="text-xl font-bold">Talanta Music & Art Space</span>
+              <span className="text-xl font-bold">Talanta Craftcode Music & Art Space</span>
             </div>
             <p className="text-gray-300 text-sm">
               Empowering aspiring musicians and artists through comprehensive education and creative expression.

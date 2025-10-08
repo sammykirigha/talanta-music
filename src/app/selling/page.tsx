@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export const metadata: Metadata = {
   title: 'Musical Instruments | Talanta Music and Art Space',
@@ -10,24 +11,16 @@ export const metadata: Metadata = {
 
 const instruments = [
   {
-    id: 1,
-    name: 'PSR 283 Digital Keyboard',
-    description: '88-key digital keyboard with multiple sound options and power adaptor included.',
-    price: 'KES 50,000',
-    image: '/store/piano.jpg',
-    alt: 'PSR 283 Digital Keyboard',
-  },
-  {
     id: 2,
     name: 'PSR E360 Digital Keyboard',
     description: 'Portable digital keyboard with 61 keys and power adaptor included.',
-    price: 'KES 26,000',
+    price: 'KES 30,000',
     image: '/store/piano-2.jpg',
     alt: 'PSR E360 Digital Keyboard',
   },
   {
     id: 3,
-    name: 'Drums Set',
+    name: 'Tama Drumset',
     description: 'Advanced digital keyboard with 61 keys and power adaptor included.',
     price: 'KES 50,000',
     image: '/store/drumset.jpg',
@@ -137,10 +130,11 @@ export default function SellingPage() {
                     Contact for More Info
                   </Link>
                   <div className="hidden group-hover:block p-4 bg-gray-50 rounded-md">
-                    <p className="text-sm text-gray-700 mb-2">
+                    <p className="text-sm text-gray-700 mb-2 ">
                       <strong>Phone:</strong> 0794 943 791 / 0703 26 34 34
-                      <a href="https://wa.me/254794943791" target="_blank" rel="noopener noreferrer" className="ml-2 text-green-600 hover:text-green-800">
-                        📱 WhatsApp
+                      <a href="https://wa.me/254794943791" target="_blank" rel="noopener noreferrer" className="ml-2 text-green-600 hover:text-green-800 flex items-center ">
+                        <FaWhatsapp className="w-4 h-4 mr-1" />
+                        WhatsApp
                       </a>
                     </p>
                     <p className="text-sm text-gray-700"><strong>Email:</strong> talantaschool.arts@gmail.com</p>

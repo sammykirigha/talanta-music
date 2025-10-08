@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import HeroBanner from "@/components/HeroBanner";
 import Courses from "@/components/Courses";
 import HistoryMissionSection from "@/components/HistoryMissionSection";
@@ -9,6 +10,17 @@ import SuccessStoriesSection from "@/components/SuccessStoriesSection";
 import EventsSection from "@/components/EventsSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
+
+export const metadata: Metadata = {
+  title: "Home | Talanta Music and Art Space",
+  description: "Welcome to Talanta Music and Art Space - Nairobi's premier music and art education center. Discover our comprehensive courses, expert instructors, and vibrant community.",
+  keywords: "music school Nairobi, art academy Kenya, music lessons, art classes, guitar piano violin training, creative education",
+  openGraph: {
+    title: "Talanta Music and Art Space - Music & Art Education in Nairobi",
+    description: "Nairobi's leading music and art education center offering comprehensive training in musical instruments, vocals, and visual arts.",
+    images: ["/hero-image.jpg"], // Replace with actual hero image
+  },
+};
 
 export default function Home() {
   return (
