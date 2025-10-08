@@ -99,11 +99,11 @@ const TalantaHeader = () => {
                 Courses
               </Link>
               <Link
-                href="/about"
+                href="/about-us"
                 className="block text-white hover:text-[#f06723] font-medium py-2 transition-colors"
                 onClick={closeMobileMenu}
               >
-                About
+                About Us
               </Link>
               <Link
                 href="/selling"
@@ -112,12 +112,6 @@ const TalantaHeader = () => {
               >
                 Store
               </Link>
-              <button className="block text-white hover:text-[#f06723] font-medium py-2 transition-colors text-left w-full">
-                Programs
-              </button>
-              <button className="block text-white hover:text-[#f06723] font-medium py-2 transition-colors text-left w-full">
-                Support
-              </button>
               <Link
                 href="/contact"
                 className="block text-white hover:text-[#f06723] font-medium py-2 transition-colors"
