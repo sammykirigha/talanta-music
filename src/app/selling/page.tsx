@@ -23,7 +23,7 @@ const instruments = [
     name: 'Tama Drumset',
     description: 'Advanced digital keyboard with 61 keys and power adaptor included.',
     price: 'KES 50,000',
-    image: '/store/drumset.jpg',
+    image: '/store/tama-drumset.webp',
     alt: 'Drums Set',
   },
   {
@@ -52,11 +52,11 @@ const instruments = [
   },
   {
     id: 8,
-    name: 'Electric Guitar',
-    description: 'Solid body electric guitar with humbucker pickups for rock and blues.',
-    price: 'KES 30,000',
+    name: 'Semi Acoustic Guitar',
+    description: 'Solid body Semi Acoustic Guitar with humbucker pickups for rock and blues.',
+    price: 'KES 18,000',
     image: '/store/guiter-3.jpg',
-    alt: 'Electric Guitar',
+    alt: 'Semi Acoustic Guitar',
   },
   {
     id: 9,
