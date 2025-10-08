@@ -39,7 +39,7 @@ const HistoryMissionSection: React.FC = () => {
           </div>
           <div className="relative h-96">
             <Image
-              src="/image-6.avif"
+              src="/founder-1.jpg"
               alt="Talanta Music and Art Space community"
               fill
               className="object-cover rounded-lg shadow-lg"

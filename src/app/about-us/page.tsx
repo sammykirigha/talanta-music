@@ -178,7 +178,7 @@ export default function AboutPage() {
                 Our History
               </h2>
               <p className="text-lg text-gray-600 mb-4">
-                Founded in 2010, Talanta Music and Art Space began as a small community initiative
+                Founded in 2020, Talanta Music and Art Space began as a small community initiative
                 to provide accessible music education. Over the years, we&#39;ve grown into a comprehensive
                 center for artistic development.
               </p>
