@@ -21,7 +21,7 @@ export default function Home() {
       <ProgramsSection />
       <WhyChooseUsSection />
       <SuccessStoriesSection />
-      <EventsSection />
+      {/* <EventsSection /> */}
       <CTASection />
       <FAQSection />
     </div>
