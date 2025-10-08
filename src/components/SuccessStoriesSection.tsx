@@ -51,7 +51,29 @@ const SuccessStoriesSection: React.FC = () => {
             Real achievements from our talented community members.
           </p>
         </div>
-        <div className="relative">
+
+        {/* Desktop Grid */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8">
+          {stories.map((story, index) => (
+            <div key={index} className="bg-gray-50 rounded-lg p-6 text-center">
+              <div className="relative w-20 h-20 mx-auto mb-4">
+                <Image
+                  src={story.image}
+                  alt={story.name}
+                  fill
+                  className="object-cover rounded-full"
+                  loading="lazy"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-1">{story.name}</h3>
+              <p className="text-[#f06723] font-medium mb-3">{story.achievement}</p>
+              <p className="text-gray-600 text-sm italic">"{story.story}"</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile Carousel */}
+        <div className="md:hidden relative">
           <div
             ref={scrollRef}
             className="flex overflow-x-auto scrollbar-hide gap-6 pb-4"
@@ -70,7 +92,7 @@ const SuccessStoriesSection: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-1">{story.name}</h3>
                 <p className="text-[#f06723] font-medium mb-3">{story.achievement}</p>
-                <p className="text-gray-600 text-sm italic">&quot;{story.story}&quot;</p>
+                <p className="text-gray-600 text-sm italic">"{story.story}"</p>
               </div>
             ))}
           </div>
