@@ -167,7 +167,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Find Us</h3>
                 <iframe
-                  src="https://maps.google.com/maps?q=Talanta%20Music%20and%20Arts%20Academy%2C%20Utawala%2C%20Nairobi%2C%20Kenya&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=Talanta%20Craftcode%20Music%20And%20Arts%20Space%2C%20Nairobi%2C%20Kenya&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
