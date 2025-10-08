@@ -30,7 +30,7 @@ const HistoryMissionSection: React.FC = () => {
             <div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-3">Our Story</h3>
               <p className="text-lg text-gray-600">
-                Founded in 2010, Talanta Music and Art Space began as a small community initiative
+                Founded in 2020, Talanta Music and Art Space began as a small community initiative
                 to provide accessible music education. Over the years, we&#39;ve grown into a comprehensive
                 center for artistic development, helping individuals of all ages discover their passion
                 and unlock their talents through personalized instruction and a supportive community.
