@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { FaWhatsapp } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-  title: 'Musical Instruments | Talanta Music and Art Space',
+  title: 'Musical Instruments | Talanta Craftcode Music and Art Space',
   description: 'Browse our selection of quality musical instruments. From guitars to keyboards, find the perfect instrument for your musical journey.',
   keywords: 'musical instruments, guitars, pianos, drums, buy instruments, music store',
 };

@@ -8,7 +8,7 @@ const slides = [
     image: '/image-6.avif',
     title: 'Discover Your Musical Journey',
     description: 'Unlock your potential with our expert music instruction and personalized learning paths.',
-    alt: 'Guitar lesson at Talanta Music and Art Space'
+    alt: 'Guitar lesson at Talanta Craftcode Music and Art Space'
   },
   {
     image: '/image-7.avif',

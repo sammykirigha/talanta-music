@@ -11,7 +11,7 @@ const courses = [
     title: 'Guitar Fundamentals',
     description: 'Learn the basics of guitar playing, from holding the instrument to playing your first chords.',
     image: '/store/guitar-2.jpg',
-    alt: 'Guitar course at Talanta Music and Art Space',
+    alt: 'Guitar course at Talanta Craftcode Music and Art Space',
   },
   {
     id: 2,

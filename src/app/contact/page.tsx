@@ -4,7 +4,6 @@ import type { Metadata } from 'next';
 import { useState, useEffect } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 
-
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',

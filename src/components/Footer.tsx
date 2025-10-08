@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
             <p className="text-gray-300 text-sm">
-              © 2025 Talanta Music and Art Space. All rights reserved.
+              © 2025 Talanta Craftcode Music and Art Space. All rights reserved.
             </p>
             <a
               href="https://www.mcdorcis.com/"

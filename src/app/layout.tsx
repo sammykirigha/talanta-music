@@ -16,12 +16,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Talanta Music and Art Space | Music Education & Art Training in Nairobi",
+  title: "Talanta Craftcode Music and Art Space | Music Education & Art Training in Nairobi",
   description: "Empower aspiring musicians through comprehensive music learning. We provide personalized instruction in various musical instruments and genres, nurturing talents and passion to foster creativity and skill development.",
   keywords: "music school Nairobi, art classes Kenya, guitar lessons, piano training, vocal coaching, music instruments store, Talanta Music Academy",
-  authors: [{ name: "Talanta Music and Art Space" }],
+  authors: [{ name: "Talanta Craftcode Music and Art Space" }],
   creator: "McDorcis Solutions",
-  publisher: "Talanta Music and Art Space",
+  publisher: "Talanta Craftcode Music and Art Space",
   formatDetection: {
     email: false,
     address: false,
@@ -32,16 +32,16 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Talanta Music and Art Space | Music Education & Art Training",
+    title: "Talanta Craftcode Music and Art Space | Music Education & Art Training",
     description: "Comprehensive music and art education in Nairobi, Kenya. Learn instruments, vocals, and visual arts with expert instructors.",
     url: "https://talantamusic.com",
-    siteName: "Talanta Music and Art Space",
+    siteName: "Talanta Craftcode Music and Art Space",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Talanta Music and Art Space Logo",
+        alt: "Talanta Craftcode Music and Art Space Logo",
       },
     ],
     locale: "en_KE",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Talanta Music and Art Space | Music Education & Art Training",
+    title: "Talanta Craftcode Music and Art Space | Music Education & Art Training",
     description: "Comprehensive music and art education in Nairobi, Kenya. Learn instruments, vocals, and visual arts with expert instructors.",
     images: ["/logo.png"],
     creator: "@talantamusic", // Replace with actual Twitter handle
@@ -88,7 +88,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "MusicSchool",
-              "name": "Talanta Music and Art Space",
+              "name": "Talanta Craftcode Music and Art Space",
               "description": "Comprehensive music and art education center in Nairobi, Kenya offering courses in various musical instruments, vocals, and visual arts.",
               "url": "https://talantamusic.com",
               "logo": "https://talantamusic.com/logo.png",

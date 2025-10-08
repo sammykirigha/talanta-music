@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'About Us | Talanta Music and Art Space',
-  description: 'Learn about Talanta Music and Art Space - our story, vision, values, and commitment to nurturing musical talents and artistic expression.',
+  title: 'About Us | Talanta Craftcode Music and Art Space',
+  description: 'Learn about Talanta Craftcode Music and Art Space - our story, vision, values, and commitment to nurturing musical talents and artistic expression.',
   keywords: 'about Talanta, music education, art space, mission, vision, team',
 };
 
@@ -14,7 +14,7 @@ export default function AboutPage() {
       <section className="bg-[#01435d] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            About Talanta Music and Art Space
+            About Talanta Craftcode Music and Art Space
           </h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto">
             Empowering aspiring musicians and artists through comprehensive education and creative expression.
@@ -31,7 +31,7 @@ export default function AboutPage() {
                 Our Mission
               </h2>
               <p className="text-lg text-gray-600 mb-4">
-                At Talanta Music and Art Space, our mission is to foster creativity and skill development
+                At Talanta Craftcode Music and Art Space, our mission is to foster creativity and skill development
                 in music and visual arts. We believe that everyone has the potential to create and express
                 themselves through artistic mediums.
               </p>
@@ -167,7 +167,7 @@ export default function AboutPage() {
             <div className="relative h-96">
               <Image
                 src="/image-10.avif"
-                alt="Talanta Music and Art Space history"
+                alt="Talanta Craftcode Music and Art Space history"
                 fill
                 className="object-cover rounded-lg shadow-lg"
                 loading="lazy"
@@ -178,7 +178,7 @@ export default function AboutPage() {
                 Our History
               </h2>
               <p className="text-lg text-gray-600 mb-4">
-                Founded in 2020, Talanta Music and Art Space began as a small community initiative
+                Founded in 2020, Talanta Craftcode Music and Art Space began as a small community initiative
                 to provide accessible music education. Over the years, we&#39;ve grown into a comprehensive
                 center for artistic development.
               </p>
