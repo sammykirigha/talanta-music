@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import { FaUser } from 'react-icons/fa';
 
 export const metadata: Metadata = {
   title: 'About Us | Talanta Craftcode Music and Art Space',
@@ -118,7 +119,7 @@ export default function AboutPage() {
                   loading="lazy"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Jane Doe</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Hilary Mwambela</h3>
               <p className="text-[#f06723] font-medium mb-2">Founder & Music Director</p>
               <p className="text-gray-600 text-sm">
                 Expert in classical and contemporary music instruction with 15+ years experience.
@@ -126,34 +127,42 @@ export default function AboutPage() {
             </div>
             <div className="bg-white rounded-lg shadow-md p-6 text-center">
               <div className="relative w-24 h-24 mx-auto mb-4">
-                <Image
-                  src="/image-8.avif"
-                  alt="Team member 2"
-                  fill
-                  className="object-cover rounded-full"
-                  loading="lazy"
-                />
+                  <FaUser className="w-20 h-20 text-gray-300 rounded-full" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">John Smith</h3>
-              <p className="text-[#f06723] font-medium mb-2">Art Instructor</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Jeremy Kimani</h3>
+              <p className="text-[#f06723] font-medium mb-2">Drums/ Percussion instruments</p>
               <p className="text-gray-600 text-sm">
-                Visual arts specialist focusing on technique and creative expression.
+                Skilled in various percussion styles, bringing rhythm and energy to our programs.
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6 text-center">
               <div className="relative w-24 h-24 mx-auto mb-4">
-                <Image
-                  src="/image-9.avif"
-                  alt="Team member 3"
-                  fill
-                  className="object-cover rounded-full"
-                  loading="lazy"
-                />
+                 <FaUser className="w-20 h-20 text-gray-300 rounded-full" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Alice Johnson</h3>
-              <p className="text-[#f06723] font-medium mb-2">Community Coordinator</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Hamilton Wamola</h3>
+              <p className="text-[#f06723] font-medium mb-2">Piano, Guitars </p>
               <p className="text-gray-600 text-sm">
-                Building connections and organizing events for our creative community.
+                Versatile musician with expertise in piano and guitar, inspiring students of all levels.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-6 text-center">
+              <div className="relative w-24 h-24 mx-auto mb-4">
+                  <FaUser className="w-20 h-20 text-gray-300 rounded-full" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Moses Mwazighe</h3>
+              <p className="text-[#f06723] font-medium mb-2">Guitar and Piano  </p>
+              <p className="text-gray-600 text-sm">
+                Experienced in teaching guitar and piano, fostering musical growth and creativity.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-6 text-center">
+              <div className="relative w-24 h-24 mx-auto mb-4">
+                  <FaUser className="w-20 h-20 text-gray-300 rounded-full" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Victor Aguma</h3>
+              <p className="text-[#f06723] font-medium mb-2">Piano and Voice</p>
+              <p className="text-gray-600 text-sm">
+                Dedicated to vocal training and piano instruction, helping students find their unique sound.
               </p>
             </div>
           </div>

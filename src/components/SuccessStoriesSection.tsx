@@ -3,25 +3,28 @@
 import React, { useRef } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { FaUser } from 'react-icons/fa';
 
 const stories = [
   {
-    name: 'Alex Thompson',
-    achievement: 'Won National Music Competition',
+    name: 'ibrahim akolo',
     image: '/image-10.avif',
-    story: 'Started as a beginner and now performing professionally. Talanta gave me the foundation I needed.',
+    story: 'Great classes and excellent teachers who make sure everything is well understood.It’s an amazing space to learn and grow musically.',
   },
   {
-    name: 'Maria Garcia',
-    achievement: 'Art Exhibition Feature',
+    name: 'Mr Ngash',
     image: '/image-11.avif',
-    story: 'The art programs helped me develop my unique style. My work has been featured in local galleries.',
+    story: 'My instructor was incredibly patient and knowledgeable. He really tailored the lessons to my interests and pushed my abilities to new levels.',
   },
   {
-    name: 'David Kim',
-    achievement: 'Music Production Career',
+    name: 'Simon Mweu',
     image: '/image-12.avif',
-    story: 'From learning basic chords to producing my own tracks. The journey started here at Talanta.',
+    story: 'Great music school in Nairobi where you can get help to learn how to play your dream musical instrument. I recommend it to parents for their kids and anyone interested in learning how to play and use musical instruments!',
+  },
+  {
+    name: 'Anderson',
+    image: '/image-12.avif',
+    story: 'I nice place. They do commendable job',
   },
 ];
 
@@ -57,17 +60,9 @@ const SuccessStoriesSection: React.FC = () => {
           {stories.map((story, index) => (
             <div key={index} className="bg-gray-50 rounded-lg p-6 text-center" itemScope itemType="https://schema.org/Person">
               <div className="relative w-20 h-20 mx-auto mb-4">
-                <Image
-                  src={story.image}
-                  alt={story.name}
-                  fill
-                  className="object-cover rounded-full"
-                  loading="lazy"
-                  itemProp="image"
-                />
+                  <FaUser className="w-20 h-20 text-gray-300 rounded-full" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-1" itemProp="name">{story.name}</h3>
-              <p className="text-[#f06723] font-medium mb-3" itemProp="jobTitle">{story.achievement}</p>
               <p className="text-gray-600 text-sm italic" itemProp="description">&quot;{story.story}&quot;</p>
             </div>
           ))}
@@ -83,17 +78,10 @@ const SuccessStoriesSection: React.FC = () => {
             {stories.map((story, index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-6 text-center flex-shrink-0 w-80" itemScope itemType="https://schema.org/Person">
                 <div className="relative w-20 h-20 mx-auto mb-4">
-                  <Image
-                    src={story.image}
-                    alt={story.name}
-                    fill
-                    className="object-cover rounded-full"
-                    loading="lazy"
-                    itemProp="image"
-                  />
+                  {/* use user avatar */}
+                  <FaUser className="w-20 h-20 text-gray-300 rounded-full" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-1" itemProp="name">{story.name}</h3>
-                <p className="text-[#f06723] font-medium mb-3" itemProp="jobTitle">{story.achievement}</p>
                 <p className="text-gray-600 text-sm italic" itemProp="description">&quot;{story.story}&quot;</p>
               </div>
             ))}

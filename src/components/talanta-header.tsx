@@ -24,7 +24,7 @@ const TalantaHeader = () => {
           <div className="flex  md:items-center">
             <Link href="/" className="flex items-center space-x-3" onClick={closeMobileMenu}>
               <Image src="/logo.png" alt='Talanta Logo' width={40} height={40} className='rounded-full' />
-              <span className="text-white font-bold text-lg hidden sm:block">Talanta Music & Art Space</span>
+              <span className="text-white font-bold text-lg hidden sm:block">Talanta Craftcode Music & Art Space</span>
             </Link>
             <a
               href="tel:0794943791"
